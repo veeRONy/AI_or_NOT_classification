@@ -8,7 +8,7 @@ dataset_dir = 'C:/Users/user/Desktop/dataset2/'
 
 labeled_dataset_dir = 'C:/Users/user/Desktop/labeled dataset 2/'
 
-def crop_and_resize_image(image, scale_factor=1.5):
+def crop_and_resize_image(image, scale_factor=1.0):
     mp_face_detection = mp.solutions.face_detection
     with mp_face_detection.FaceDetection(min_detection_confidence=0.2) as face_detection:
         results = face_detection.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
